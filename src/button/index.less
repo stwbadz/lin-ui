@@ -58,7 +58,7 @@
 
     //Type
     &-default{
-        background-color: @default-color;
+      .theme(background-color,'@l-main-color');
     }
 
     &-success {
@@ -101,8 +101,9 @@
     // Plain
     &-plain{
         background-color: #fff;
-        color: @default-color;
-        border: 2rpx solid @default-color;
+        border: 2rpx solid;
+        .theme(color,'@l-main-color');
+        .theme(border-color,'@l-main-color');
     }
     &-success&-plain{
         background-color: #fff;
@@ -134,8 +135,11 @@
         animation: btn-spin 0.6s linear;
         animation-iteration-count: infinite;
         &-default{
-            border: 4rpx solid @default-color;
-            border-color:@default-color @default-color @default-color transparent;
+            border: 4rpx solid;
+            .theme(border-top-color,'@l-main-color');
+            .theme(border-right-color,'@l-main-color');
+            .theme(border-bottom-color,'@l-main-color');
+            border-left-color: transparent;
         }
         &-success{
             border: 4rpx solid @success-color;
