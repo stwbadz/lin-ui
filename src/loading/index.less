@@ -1,5 +1,6 @@
 @import "../../config/styles/_base.less";
 @import "../../config/styles/_theme.less";
+@import "../../config/styles/_mixins.less";
 
 .container-loading {
   position: fixed;
@@ -82,50 +83,48 @@
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-color: @default-color;
+  .theme(background-color,"@l-main-color");
   opacity: 0.6;
   position: absolute;
   top: 0;
   left: 0;
-  -webkit-animation: bounce 2.0s infinite ease-in-out;
-  animation: bounce 2.0s infinite ease-in-out;
+  -webkit-animation: bounce 2s infinite ease-in-out;
+  animation: bounce 2s infinite ease-in-out;
 }
 
 .flash-bounce2 {
-  -webkit-animation-delay: -1.0s;
-  animation-delay: -1.0s;
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
 }
 
 @-webkit-keyframes bounce {
-
   0%,
   100% {
-    -webkit-transform: scale(0.0);
+    -webkit-transform: scale(0);
   }
 
   50% {
-    -webkit-transform: scale(1.0);
+    -webkit-transform: scale(1);
   }
 }
 
 @keyframes bounce {
-
   0%,
   100% {
-    transform: scale(0.0);
-    -webkit-transform: scale(0.0);
+    transform: scale(0);
+    -webkit-transform: scale(0);
   }
 
   50% {
-    transform: scale(1.0);
-    -webkit-transform: scale(1.0);
+    transform: scale(1);
+    -webkit-transform: scale(1);
   }
 }
 
 /*flip  */
 
 .flip-bounce1 {
-  background-color: @default-color;
+  .theme(background-color,"@l-main-color");
   -webkit-animation: rotateplane 1.2s infinite ease-in-out;
   animation: rotateplane 1.2s infinite ease-in-out;
 }
@@ -169,7 +168,7 @@
 }
 
 .change-bounce1 {
-  background-color: @default-color;
+  .theme(background-color,"@l-main-color");
   border-radius: 100%;
   display: inline-block;
   -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
@@ -181,7 +180,7 @@
 }
 
 .change-bounce2 {
-  background-color: @default-color;
+  .theme(background-color,"@l-main-color");
   border-radius: 100%;
   display: inline-block;
   -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
@@ -193,7 +192,7 @@
 }
 
 .change-bounce3 {
-  background-color: @default-color;
+  .theme(background-color,"@l-main-color");
   border-radius: 100%;
   display: inline-block;
   -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
@@ -203,30 +202,28 @@
 }
 
 @-webkit-keyframes bouncedelay {
-
   0%,
   80%,
   100% {
-    -webkit-transform: scale(0.0);
+    -webkit-transform: scale(0);
   }
 
   40% {
-    -webkit-transform: scale(1.0);
+    -webkit-transform: scale(1);
   }
 }
 
 @keyframes bouncedelay {
-
   0%,
   80%,
   100% {
-    transform: scale(0.0);
-    -webkit-transform: scale(0.0);
+    transform: scale(0);
+    -webkit-transform: scale(0);
   }
 
   40% {
-    transform: scale(1.0);
-    -webkit-transform: scale(1.0);
+    transform: scale(1);
+    -webkit-transform: scale(1);
   }
 }
 
@@ -250,9 +247,9 @@
   height: 70rpx;
 }
 
-.container1>.container-view,
-.container2>.container-view,
-.container3>.container-view {
+.container1 > .container-view,
+.container2 > .container-view,
+.container3 > .container-view {
   border-radius: 50%;
   position: absolute;
   background-color: @theme-color;
@@ -319,8 +316,8 @@
 }
 
 .container3 .circle1 {
-  -webkit-animation-delay: -1.0s;
-  animation-delay: -1.0s;
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
 }
 
 .container1 .circle2 {
@@ -369,30 +366,28 @@
 }
 
 @-webkit-keyframes bouncedelay4 {
-
   0%,
   80%,
   100% {
-    -webkit-transform: scale(0.0)
+    -webkit-transform: scale(0);
   }
 
   40% {
-    -webkit-transform: scale(1.0)
+    -webkit-transform: scale(1);
   }
 }
 
 @keyframes bouncedelay4 {
-
   0%,
   80%,
   100% {
-    transform: scale(0.0);
-    -webkit-transform: scale(0.0);
+    transform: scale(0);
+    -webkit-transform: scale(0);
   }
 
   40% {
-    transform: scale(1.0);
-    -webkit-transform: scale(1.0);
+    transform: scale(1);
+    -webkit-transform: scale(1);
   }
 }
 
@@ -405,28 +400,28 @@
 .rotate-mini {
   height: 40rpx;
   width: 40rpx;
-  border-top: 6rpx solid @default-color;
+  .theme(border-top,"6rpx solid @l-main-color");
   border-right: 6rpx solid transparent !important;
-  border-bottom: 6rpx solid @default-color;
-  border-left: 6rpx solid @default-color;
+  .theme(border-bottom,"6rpx solid @l-main-color");
+  .theme(border-left,"6rpx solid @l-main-color");
 }
 
 .rotate-medium {
   height: 50rpx;
   width: 50rpx;
-  border-top: 6rpx solid @default-color;
+  .theme(border-top,"6rpx solid @l-main-color");
   border-right: 6rpx solid transparent !important;
-  border-bottom: 6rpx solid @default-color;
-  border-left: 6rpx solid @default-color;
+  .theme(border-bottom,"6rpx solid @l-main-color");
+  .theme(border-left,"6rpx solid @l-main-color");
 }
 
 .rotate-large {
   height: 70rpx;
   width: 70rpx;
-  border-top: 8rpx solid @default-color;
+  .theme(border-top,"8rpx solid @l-main-color");
   border-right: 8rpx solid transparent !important;
-  border-bottom: 8rpx solid @default-color;
-  border-left: 8rpx solid @default-color;
+  .theme(border-bottom,"8rpx solid @l-main-color");
+  .theme(border-left,"8rpx solid @l-main-color");
 }
 
 @keyframes rotate {
