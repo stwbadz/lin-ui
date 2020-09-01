@@ -5,7 +5,7 @@
       <view class="close" data-index="{{ index }}" catchtap="onDelTap">
         <l-icon name="close" color="#fff" size="22" l-class="close-icon" />
       </view>
-      <image class="{{size === 3? 'img': 'min-img'}}" mode="{{ mode }}" src="{{newOrOld==='old'? item:item.url }}" />
+      <image class="{{size === 3? 'img': 'min-img'}} l-item-class" mode="{{ mode }}" src="{{newOrOld==='old'? item:item.url }}" />
     </view>
   </l-grid-item>
   <!-- add 按钮 -->
